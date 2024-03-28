@@ -1,0 +1,60 @@
+﻿@import url(../setup/setup.less);
+
+.place-block {
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid @line;
+    flex:50%;
+    .place-image {        
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        width: 100%;
+        z-index: 1;
+        margin-top: -50px;
+        margin-bottom: 30px;
+        img{ width: 100%;display: block;}
+    }
+    .place-title{    
+        background: #fff;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 15px 25px;
+        text-align: center;
+        color: @main;
+        position: relative;
+        font-weight: 500;
+        font-size: 28px;
+        display: inline;
+        margin: auto;
+        z-index: 10;
+    }
+    .place-fotter{
+        display: flex;    text-align: left;
+        .place-data{
+            display: flex;   color: @subtext;   flex-direction: column; row-gap: 15px;max-width: 60%;
+            p{margin: 0; &:before{ padding-right: 15px; font-size: 28px;    float: left;}}
+            a{color: @subtext; &:before{ padding-right: 15px;color: @subtext; }
+                &.icon-phone{ color: @main; font-size: 30px; font-weight: 300; text-decoration: none!important;}
+            }
+        }
+        .place-days{ display: flex;
+            .icon-time{ color: @subtext; font-size: 26px; padding-right: 15px;}
+            p{ margin-top: 0px;color: @subtext;  span{display: block; margin-bottom: 15px;}}
+        }
+    }
+}
+
+.map{
+     width: 100%; overflow: hidden; border-radius: 15px; border: 1px solid @line; height: 350px; position: relative;
+    .map-frame{ position: relative; z-index: 9;margin-top: -70px;}
+    .map-place{background: #fff url(../images/place.svg) no-repeat center  15px;    background-size: 52px; position: absolute; left:-2px; bottom: -2px; border: 1px solid @line; z-index: 999; width: 115px; height: 115px;
+        color: @subtext; text-align: center; line-height: 160px;border-top-right-radius: 15px;
+        &:hover{ background-color: @bgr; text-decoration: none;}
+    }
+}
+
+
+.collapsible{
+    &-header{ color: @main; font-size: 24px;} 
+}
