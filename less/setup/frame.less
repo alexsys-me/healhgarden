@@ -162,6 +162,7 @@ footer{
     position: relative;
     display: flex;
     align-items: center;
+    min-height: 300px;
     &.grey{
         background: @bgr;    
         border: 1px solid @line;    
@@ -171,7 +172,7 @@ footer{
     .leftside{margin-top: -36px;}
     .btn{    min-width: 230px;}
     h4{color:#fff; font-weight: 400; padding-top: 0; margin-top: 0;}
-    p{color:#fff;font-weight: 300; margin-bottom:25px;}
+    p{color:#fff;font-weight: 300; margin-bottom:25px; font-style: 24px;}
     @media (max-width: 1024px) { img{margin-right: -80px;}}
     @media (max-width: 860px) { 
       padding: 30px;
@@ -240,7 +241,10 @@ footer{
 }
 
 //----------DEF_BLOCK ---------- //
-.about{max-width: 50%;}
+.about{max-width: 50%;
+    .text{ color: @subtext;}
+    .descript{ color:  @text; font-size: 24px;}
+}
 .specialist{
     color: @subtext;
     .over_img{
@@ -362,3 +366,105 @@ footer{
 }
 
 #akcii{ .flex-row { margin-bottom: 25px;}}
+
+.data-box{
+    position: relative; height: 250px;
+    background: #fff url(../images/logo_bg.svg) no-repeat 90% center;
+    background-size: 35%;
+    
+    .descript{ color: @main; font-size: 24px;}
+    img{ position: absolute; right: 20px; bottom: 0px;}
+    .btn{position: absolute;left: 20px; bottom: 25px;}
+}
+
+.previlegii{
+    padding: 50px 0;
+    .flex-col{ border: 1px solid @line; border-radius: 15px; padding: 25px;}
+    .descript{ color: @main; font-size: 26px; line-height: 120%;}
+    .text{ color: @subtext;}
+}
+
+.more-data{ 
+    display: flex;
+    column-gap: 50px;
+    position: relative;
+    span{ color: @subtext; font-weight: 300; max-width: 60%;    display: block;}
+    img{ border-radius: 15px; border: 1px solid @line;}
+    h4{margin: 10px 0;}
+    .text{ color: @subtext;}
+    strong  {
+        font-size: 26px;
+        color: @text;
+    }
+    &-stage{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: @main;
+        padding: 10px 25px;
+        border-radius: 35px;
+        border: 1px solid @line;
+
+    }
+
+    &-content{ margin-top: 20px;}
+    .more-footer{
+        margin-top: 60px;   
+        display: flex;
+        justify-content: space-between;    
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+       img{border: none; top: 0; position: absolute; right: 20px;} 
+    }
+}
+
+.cost{
+    font-size: 22px;
+    color: @text;
+    b{ color: @main;  font-size: 24px; font-weight: 600;}
+}
+.btn-box{
+    display: flex;
+    column-gap: 20px;
+}
+
+.about-company{
+ margin-top: 60px;
+}
+
+.slide-gallery{ overflow: hidden; border-radius: 15px; border: 1px solid @line;}
+
+.order-block{
+    padding: 30px;background: #fff url(../images/logo_bg.svg) no-repeat 90% center;    background-size: 25%;
+    .descript{ color: @main; font-size: 24px; width: 100%; margin-bottom: 25px;}
+    .selectspecial{
+        height: 120px; overflow-y: auto;
+        label{ width: 100%; display: block; border-bottom: 1px solid @line; padding-bottom:5px; margin-bottom: 5px;
+            span {font-size: 22px; font-weight: 500; color: @subtext;}
+            i{ font-size: 15px; display: block; font-weight: 300; font-style: normal;}
+
+        }
+    }
+    .selectdate, .selecttime{
+        display: flex; border-radius: 15px; column-gap: 10px;
+        .item{cursor: pointer; position: relative; width: 90px; height: 65px; 
+            input{  z-index: 10; width: 100%; height: 100%;  left:0; top:0;}
+            input:checked+span{background-color: @main; color: #fff;}
+
+            span{ z-index: 8;background: #fff; padding: 0px;display: block; width: 100%; height: 100%;border: 1px solid @line;border-radius: 15px; color: @subtext;text-align: center;display: flex;justify-content: center;  flex-direction: column; 
+                &:before{ display: none;}
+                &:hover{ background-color: @bgr}
+             }
+        }
+    }
+}
+
+
+.checklist{
+    
+}
+ 
+ 

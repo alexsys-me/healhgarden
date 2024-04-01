@@ -57,7 +57,7 @@
   }
   &.dowble{ //2colum
     flex-wrap: wrap;
-    .flex-col{flex: 49%}
+    .flex-col{flex: 48.5%;  }
   }
   &.three{ //3 colum
     flex-wrap: wrap; column-gap: 20px;  row-gap: 20px;    
@@ -373,15 +373,4 @@ ul{
       &:before{font-family: 'icomoon' !important;content: "\e903"; color: @main;margin-left: -30px;        margin-right: 10px;}
     }
   }
-}
-
-.selectdate, .selecttime{
-    display: flex; border-radius: 15px; column-gap: 10px;
-    .item{cursor: pointer; border: 1px solid @line;border-radius: 15px;  width: 90px; height: 65px; color: @subtext;text-align: center;display: flex;
-      justify-content: center;  flex-direction: column; 
-      b{ display: block;}
-      &:hover{ background-color: @bgr}
-      &.active{ background-color: @main; color: #fff;}
-    }
-
 }
