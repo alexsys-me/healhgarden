@@ -16,8 +16,8 @@
   <link rel="stylesheet"  href="css/root.css" />
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css" media="screen,projection" />
- <!-- <link rel="stylesheet/less" href="less/main.less" type="text/css" />
-  <script src="js/less.js" type="text/javascript"></script>-->
+  <link rel="stylesheet/less" href="less/main.less" type="text/css" />
+  <script src="js/less.js" type="text/javascript"></script>   
 </head>
 
 <body>
@@ -276,13 +276,14 @@
         <h1>Услуга - типовая страница</h1>
       </div>
 
-      <div id="about">
+     
         <div class="wrapper flex-row">
           <div class="gallery">
             <div class="img"><img src="img/diag-1.jpg" alt="" class="zoom"></div>
             <div class="img"><img src="img/diag-2.jpg" alt="" class="zoom"></div>
             <div class="img"><img src="img/diag-4.jpg" alt="" class="zoom"></div>
             <div class="img"><img src="img/diag-3.jpg" alt="" class="zoom"></div>
+            <a href="#" class="btn main online">Записаться на услугу</a>
           </div>
           <div class="about">
             <p class="descript">Мы используем новейшие диагностические технологии в магнитно-резонансной томографии
@@ -295,46 +296,57 @@
             <div class="greybox">
               <p class="text">После проведения исследования, врач-рентгенолог, в понятной форме для пациента, объяснит
                 полученные данные и ответит на все вопросы.</p>
-              <ul class="checklist">
-                <li>Новейшие диагностические технологии</li>
-                <li>Индивидуальный подход</li>
-                <li>Комфортные условия</li>
-                <li>Профессионализм</li>
-              </ul>
+              <br>
+              <div class="blue-box p30">
+                <ul class="checklist">
+                  <li>Новейшие диагностические технологии</li>
+                  <li>Индивидуальный подход</li>
+                  <li>Комфортные условия</li>
+                  <li>Профессионализм</li>
+                </ul>
+              </div>
+              
             </div>
           </div>
         </div>
-
-        <section id="special">
-          <div class="wrapper flex-row">
-            <div class="flex-col box special-block">
-              <div class="special-titile">
-                <div class="text">Три отдела</div>
-                <div class="descript">ПОЗВОНОЧНИКА</div>
-                <img src="images/posvonochnik.jpg" alt="">
-                <a href="#" class="btn outlin">Подробнее</a>
-              </div>
-            </div>
-            <div class="flex-col box special-block">
-              <div class="special-titile">
-                <div class="text">МРТ</div>
-                <div class="descript">СУСТАВОВ</div>
-                <img src="images/posvonochnik.jpg" alt="">
-                <a href="#" class="btn outlin">Подробнее</a>
-              </div>
-            </div>
-            <div class="flex-col box special-block big-item">
-              <div class="special-titile">
-                <div class="text">МРТ всего тела</div>
-                <div class="descript">ОНКОСКРИНИГ</div>
-                <img src="images/posvonochnik.jpg" alt="">
-                <a href="#" class="btn outlin">Подробнее</a>
-              </div>
-            </div>
+      </div>
+      </section>
+     
+      
+  <section id="special">
+    <div class="wrapper flex-row">
+      <div class="flex-col box special-block">
+          <div class="special-titile">
+             <div class="text">Три отдела</div>
+             <div class="descript">ПОЗВОНОЧНИКА</div>
+             <img src="images/posvonochnik.png" alt="">
+             <a href="#" class="btn outline">Подробнее</a>
           </div>
-        </section>
-        <h3>Прайс-лист</h3>
-        <ul class="collapsible grey">
+      </div>
+      <div class="flex-col box special-block">
+        <div class="special-titile">
+           <div class="text">МРТ</div>
+           <div class="descript">СУСТАВОВ</div>
+           <img src="images/kosti.png" alt="">
+           <a href="#" class="btn outline">Подробнее</a>
+        </div>
+    </div>
+    <div class="flex-col box special-block big-item">
+      <div class="special-titile">
+         <div class="text">МРТ всего тела</div>
+         <div class="descript">ОНКОСКРИНИГ</div>
+         <img src="images/screen.png" alt="">
+         <a href="#" class="btn outline">Подробнее</a>
+      </div>
+  </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrapper">
+
+    <h3>Прайс-лист</h3>
+    <ul class="collapsible grey">
           <li>
             <div class="collapsible-header">ПОЗВОНОЧНИК</div>
             <div class="collapsible-body">
@@ -381,9 +393,9 @@
               </ul>
             </div>
           </li>
-        </ul>
+    </ul>
         <!--Специалисты -->
-        <div id="specialist" class="flex-row grid">
+    <div id="specialist" class="flex-row grid">
           <h3>Специалисты</h3>
           <div class="specialist flex-col box">
             <div class="over_img"><img src="img/specialist.jpg" alt=""></div>
@@ -439,9 +451,9 @@
           </div>
 
 
-        </div>
-
-        <ul class="collapsible">
+    </div>
+    <br> <br>
+    <ul class="collapsible">
           <li>
             <div class="collapsible-header">Какие направления травматологии доступны в нашей клинике?</div>
             <div class="collapsible-body">
@@ -480,7 +492,7 @@
               </ul>
             </div>
           </li>
-        </ul>
+    </ul>
         
       </div>
   </section>
@@ -521,10 +533,9 @@
         </div>
         <div class="flex-col flex-row dowble order-data">
           <div class="descript">Оставьте свои данные</div>
-          <div class="flex-col "> <input type="text" placeholder="Ваше ФИО"></div>
-          <div class="flex-col "> <input type="text" class="phone" placeholder="+7 (___)___-__-__"></div>
-          <div class="flex-col "> <textarea name="" id="" cols="30" rows="20">Комментарий</textarea></div>
-          <div class="flex-col "> <input type="text" class="btn main" value="ОТПРАВИТЬ"></div>
+          <div class="flex-col "> <input type="text" placeholder="Ваше ФИО"> <input type="text" class="phone" placeholder="+7 (___)___-__-__"></div>
+          <div class="flex-col "> <textarea name="" id="" cols="30" rows="20">Комментарий</textarea> <input type="text" class="btn main" value="ОТПРАВИТЬ"></div>
+ 
         </div>
     </form>
   </div>
@@ -535,6 +546,7 @@
   <!-- Консультация-->
   <section id="consultation">
     <div class="wrapper">
+      <br> <br> <br>
       <div class="depositbox">
         <div class="leftside">
           <h4> Бесплатная онлайн консультация</h4>

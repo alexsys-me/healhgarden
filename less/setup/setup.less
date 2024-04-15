@@ -30,8 +30,9 @@
       padding: 0 30px;
     }
 }
+.p60{ padding: 60px!important;  @media (max-width: 480px) {padding: 20px!important;}}
 .p40{ padding: 40px;  @media (max-width: 480px) {padding: 20px;}}
-.p30{ padding: 30px;  @media (max-width: 480px) {padding: 15px;}}
+.p30{ padding: 30px;  @media (max-width: 1366px) {padding: 25px;}@media (max-width: 768px) {padding: 20px;} @media (max-width: 480px) {padding: 15px;}}
 .p20{ padding: 20px; @media (max-width: 480px) {padding: 15px;}}
 .row-gap{    row-gap: 45px;  display: flex;  flex-wrap: wrap; @media (max-width: 1024px) {row-gap: 25px; } @media (max-width: 480px) {row-gap: 15px; }}
 .nowrap{flex-wrap: nowrap;}
@@ -39,12 +40,13 @@
 //GRID
 .flex-row{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   column-gap: 30px; 
   row-gap: 30px;
   max-width: 100%;
   width: 100%;
+  &.wrap{ flex-wrap: wrap;}
   @media (max-width: 1366px) {column-gap: 20px; row-gap: 20px;}
   @media (max-width: 860px) {
     flex-wrap: wrap;
@@ -57,15 +59,14 @@
   }
   &.dowble{ //2colum
     flex-wrap: wrap;
-    .flex-col{flex: 48.5%;  }
+    .flex-col{flex: 48%; max-width:48%; }
   }
   &.three{ //3 colum
     flex-wrap: wrap; column-gap: 20px;  row-gap: 20px;    
-    .flex-col{flex: 33%; max-width: 32%;}
+    .flex-col{flex: 31.5%;max-width: 31.5%; }
     @media (max-width: 1400px) {column-gap: 15px;  row-gap: 15px;}
-    @media (max-width: 1200px) {.flex-col{flex: 33%; max-width: 30%;}}
-    @media (max-width: 1000px) {.flex-col{flex: 49%; max-width: 48%;}}
-    @media (max-width: 1000px) {.flex-col{flex: 49%; max-width: 48%;}}
+    @media (max-width: 1200px) {.flex-col{flex: 32%; max-width: 32%;}}
+    @media (max-width: 1000px) {.flex-col{flex: 48%;max-width: 48%; }}
   }
   &.grid{//4colum
     flex-wrap: wrap;    justify-content: flex-start;
@@ -174,7 +175,7 @@ h6 {
   font-weight: 400;
   position: relative;
   margin: auto;
-  margin-bottom: 30px;
+ 
 }
 
 h1{
@@ -258,17 +259,16 @@ a {
   &.round { border-radius: 100%; border: 1px solid @line; color: #91a0b1; font-size: 12px;width: 56px; height: 56px;
     &:hover{ color: #fff; background-color: @main;}
   }
+  &.send{     width: 350px; font-weight: 400;    max-width: 350px;}
   &.white{ background-color: #fff;}
 }
 
 
 .tabs{
   border-radius: 15px;
-  background: @bgr;
   padding: 20px;
   display: flex;
-  height: auto;
- 
+  height: auto; 
   .indicator{display: none;}
   .tab{
     margin-left: 15px;    
@@ -317,7 +317,7 @@ form{ width: 100%; flex: 100%; display: flex; row-gap: 25px; flex-wrap: wrap;}
  form textarea {
     background: #fff!important;
     border: 1px solid #e1e1e1!important;
-    border-radius: 35px!important;  
+    border-radius: 15px!important;  
     color: @text!important;
     font-size: 18px;
     padding: 20px;
@@ -326,7 +326,7 @@ form{ width: 100%; flex: 100%; display: flex; row-gap: 25px; flex-wrap: wrap;}
     box-sizing: border-box;
     padding:10px 25px!important;
     margin: auto!important;
-
+    width: 100%;
     @media (max-width: 480px) {
         padding: 10px 15px;border-radius: 15px;
     }
@@ -356,7 +356,9 @@ textarea {
   }
   &-body{ border: none;}
   &.grey{
-    .collapsible-header{ background: @bgr; border-radius: 8px; border: none;}
+    .collapsible-header{ background: @bgr; border-radius: 8px; border: none;
+       &:hover{background: #e7ecf3!important;}
+      }
   }
   .active .collapsible-header:before{  transform: rotate(90deg);padding-left: 10px;}
 }
@@ -377,7 +379,65 @@ ul{
   }
 }
 
-
+ol{
+  color: @subtext;
+  li{ margin-bottom: 15px;
+    line-height: 120%;
+    max-width: 800px;}
+  strong{    font-weight: 600;}
+}
 .warning{
   font-weight: 600; padding-left: 30px; border-left: 5px solid @main; font-size: 18px; line-height: 130%;
 }
+
+.doctor{
+  cursor: pointer; overflow: hidden; position: relative;
+  input{ top:0; left: 0;}
+  input:checked .specialist::before{border: 1px solid @main;}
+  .specialist{ position: relative; z-index: 1; flex-wrap: wrap; overflow: hidden;
+    img{ float: left; margin-right: 15px;}
+    .name{ color: @main; font-weight: 500; flex:50%; font-size: 16px; display: block;}
+    .title{ display: block; font-size: 15px;}
+    &:before{ 
+      content: '';
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #d5e0ec;
+      border-radius: 100%;
+      z-index: 99;
+      background: #fff;
+      left: 40px;
+      bottom: 5px;
+    }
+  }
+}
+
+.attention{ 
+  color: @text; font-size: 19px;
+  span{ color: @subtext;}
+}
+
+.deposit{
+  &-title h2{ margin-bottom: 0;}
+  background-color: @main;color: #fff; border-radius: 15px; padding: 35px; display: flex;font-size: 24px; line-height: 130%;    align-items: center;column-gap: 20px;
+}
+
+
+.cyan{ 
+  background: @main url(../images/mountain.jpg) bottom center no-repeat;padding: 120px;
+}
+
+.small-text{ color: @subtext; font-size: 17px;}
+
+.discount{
+  max-width: 70%; margin:40px 0 60px;
+  &-row{ display: flex; justify-content: space-between; border-bottom: 2px solid @line; padding: 15px 0 5px;}
+  &-col{
+    .text{}
+    .price-text{ font-weight: 600; font-size: 45px; line-height: 80%;span{ font-size: 20px;}}
+    .discount-text{ color: @main;font-weight: 600; line-height: 80%;font-size: 45px;}
+  }
+}
+
