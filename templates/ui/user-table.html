@@ -70,7 +70,7 @@
                     <td class="user-list__td">{{item.id}}</td>
                     <td class="user-list__td">
                         <a href="#" class="user-list__control icon-pen"></a>
-                        <a href="#" class="user-list__control {% if item.statistic == 'off'%}user-list__control_disabled{%endif%} icon-graph"></a>
+                        <a href="#" class="user-list__control {% if item.statistic == 'off'%}user-list__control_disabledd{%endif%} icon-graph"></a>
                         {% if item.sound == 'on' %}
                         <a href="#" class="user-list__control icon-sound-on"></a>
                         {% else %}
@@ -98,7 +98,7 @@
                     item.classList.contains('user-list__row_selected') ? item.classList.remove('user-list__row_selected') : item.classList.add('user-list__row_selected');
 
                     buttons.forEach(function(item){
-                        item.classList.remove('button_disabled')
+                        item.classList.remove('button_disabledd')
                     })
                 })
             });
