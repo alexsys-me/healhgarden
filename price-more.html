@@ -289,28 +289,28 @@
             <label class="doctor">
               <input class="with-gap" name="group1" type="radio" />
               <div class="specialist">
-                  <img src="doctor.jpg" alt="">
-                  <div class="name">Арьков Владимир Владимирович</div>
-                  <div class="title">Научный руководитель</div>
+                <img src="doctor.jpg" alt="">
+                <div class="name">Арьков Владимир Владимирович</div>
+                <div class="title">Научный руководитель</div>
               </div>
             </label>
             <label class="doctor">
               <input class="with-gap" name="group1" type="radio" />
               <div class="specialist">
-                  <img src="doctor.jpg" alt="">
-                  <div class="name">Арьков Владимир Владимирович</div>
-                  <div class="title">Научный руководитель</div>
+                <img src="doctor.jpg" alt="">
+                <div class="name">Арьков Владимир Владимирович</div>
+                <div class="title">Научный руководитель</div>
               </div>
             </label>
             <label class="doctor">
               <input class="with-gap" name="group1" type="radio" />
               <div class="specialist">
-                  <img src="doctor.jpg" alt="">
-                  <div class="name">Арьков Владимир Владимирович</div>
-                  <div class="title">Научный руководитель</div>
+                <img src="doctor.jpg" alt="">
+                <div class="name">Арьков Владимир Владимирович</div>
+                <div class="title">Научный руководитель</div>
               </div>
-            </label>        
-          </div>  
+            </label>
+          </div>
         </div>
         <div class="flex-col box order-block">
           <div class="descript">Выберите дату приема</div>
@@ -336,11 +336,12 @@
         </div>
         <div class="flex-col flex-row dowble order-data">
           <div class="descript">Оставьте свои данные</div>
-          <div class="flex-col "> <input type="text" placeholder="Ваше ФИО"><input type="text" class="phone" placeholder="+7 (___)___-__-__"></div>
-          <div class="flex-col "> <textarea name="" id="" cols="30" rows="20">Комментарий</textarea><input type="text" class="btn main" value="ОТПРАВИТЬ"></div>
+          <div class="flex-col "> <input type="text" placeholder="Ваше ФИО"><input type="text" class="phone"
+              placeholder="+7 (___)___-__-__"></div>
+          <div class="flex-col "> <textarea name="" id="" cols="30" rows="20">Комментарий</textarea><input type="text"
+              class="btn main" value="ОТПРАВИТЬ"></div>
         </div>
       </form>
-
       <ul class="collapsible grey">
         <li>
           <div class="collapsible-header">Противопоказания:</div>
@@ -488,8 +489,30 @@
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+    $('.micro').owlCarousel({
+      nav:true,
+      dots:false,
+      responsive:{       
+          1440:{
+              items:5
+          },
+          1280:{
+              items:4
+          },
+          1000:{
+              items:4
+          },
+          768:{items:8},
+          480:{
+              items:3
+          } 
+          }
+      })
+  </script>
 </body>
 
 </html>

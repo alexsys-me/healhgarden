@@ -106,10 +106,16 @@
 .icon-basket:before {
   content: "\e913";
 }
-
+input::placeholder {
+  color: #707f92;
+  font-size: 16px;
+  font-style: italic;
+    font-family: Jost;
+}
 ul {
   list-style: none;
   padding-left: 0px;
+  margin-top: 0;
 }
 
 .color1 {
@@ -610,6 +616,7 @@ a:focus {
 
 #content .descript {
   font-size: 24px;
+
 }
 
 @media (max-width: 480px) {
@@ -623,6 +630,7 @@ a:focus {
   line-height: 120%;
   margin-bottom: 10px !important;
   font-weight: 500;
+  margin-top: 0;
 }
 
 @media (max-width: 1366px) {
@@ -1041,7 +1049,7 @@ ul.pricelist li b {
 ul.blue-list li {
   background-color: #E1EEFF;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 110%;
   padding: 10px 40px 10px;
   color: #3A4E66;
@@ -1059,7 +1067,7 @@ ul.blue-list li:before {
 ul.cyan-list li {
   background-color: #0C54A0;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 110%;
   padding: 10px 40px 10px;
   color: #fff;
@@ -1070,6 +1078,24 @@ ul.cyan-list li:before {
   font-family: 'icomoon' !important;
   content: "\e903";
   color: #fff;
+  margin-left: -30px;
+  margin-right: 10px;
+}
+
+ul.white-list li {
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 110%;
+  padding: 10px 40px 10px;
+  color: #3A4E66;
+  margin-bottom: 15px;
+}
+
+ul.white-list li:before {
+  font-family: 'icomoon' !important;
+  content: "\e903";
+  color: #3A4E66;
   margin-left: -30px;
   margin-right: 10px;
 }
@@ -1286,7 +1312,7 @@ ol strong {
 }
 
 #serv {
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 
 #head {
@@ -1434,6 +1460,11 @@ ol strong {
   justify-content: space-between;
   border-bottom: 1px solid #d5e0ec;
   margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+#review .title h5 {
+  margin-left: 0px;
 }
 
 #review .text {
@@ -1461,8 +1492,13 @@ ol strong {
 .micro+#content {
   margin-top: 150px;
 }
-.micro.owl-carousel{  position: relative;   max-width: 90%;} 
-.micro .owl-nav{
+
+.micro.owl-carousel {
+  position: relative;
+  max-width: 90%; 
+}
+.micro .owl-nav button{ margin: 0;}
+.micro .owl-nav {
   text-align: left;
   display: block;
   width: 46px;
@@ -1472,11 +1508,20 @@ ol strong {
   right: 6px;
   top: -18px;
 }
-.micro  .owl-nav button{opacity: 1;}
-.micro  .owl-nav button span{
-  background-color: #0C54A0; color: #fff; 
+
+.micro .owl-nav button {
+  opacity: 1;
 }
-.micro .owl-prev{display: none;}
+
+.micro .owl-nav button span {
+  background-color: #0C54A0;
+  color: #fff;
+}
+
+.micro .owl-prev {
+  display: none;
+}
+
 header {
   position: fixed;
   z-index: 99;
@@ -1576,10 +1621,12 @@ header .icon-find {
 .meganenu_action>li:hover #megamenu {
   display: block !important;
   opacity: 1;
-  top: 90px;
-  padding: 60px 40px;
-  width: 1360px;
-  max-width: 1360px;
+  top: 80px;
+  background: #Fff;
+  padding: 30px 40px 60px;
+  width: 90%;
+  max-width: 1300px;
+  box-shadow: 0px 7px 20px 10px #121b1e0a;
 
 }
 
@@ -1604,18 +1651,59 @@ header .icon-find {
 
 #megamenu li.firstlevel:hover {
   background-color: #F2F6FB;
+  color: #0C54A0 !important;
 }
 
 #megamenu li.firstlevel:hover .secondmenu {
   display: block;
 }
 
+#megamenu .secondlevel {
+  border-bottom: 1px solid #c6d3e2;
+  padding: 10px 0;
+}
+
+#megamenu .secondlevel:hover {
+  color: #0C54A0 !important;
+}
+
+#megamenu .secondlevel:hover .threedmenu {
+  display: block;
+}
+
+.threedmenu {
+  width: 600px;
+   background-color: transparent;
+  position: absolute;
+  position: absolute;
+  display: flex;
+  column-gap: 20px;
+  top: 20px;
+  left: 300px;
+  padding-left: 100px;
+}
+
+.threedmenu li {
+  flex: 48%;
+}
+
+.threedmenu a {
+  line-height: 120%;
+  color: #727F8E;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#megamenu .threedmenu li:hover a {
+  color: #0C54A0!important;
+}
+
 .secondmenu {
   border-radius: 15px;
   background-color: #F2F6FB;
   position: absolute;
-  left: 272px;
-  top: 60px;
+  left: 270px;
+  top: 15px;
   height: 90%;
   padding: 25px;
 }
@@ -1850,7 +1938,8 @@ footer {
 }
 
 footer .title {
-  padding-bottom: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 20px;
 }
 
 footer .title:before {
@@ -1969,9 +2058,11 @@ footer ul li b {
 }
 
 .depositbox .btn {
-  min-width: 230px;
+  min-width: 230px;    justify-content: center;
 }
-
+.order-data{ padding: 25px;}
+form input, form select, form textarea{    border-radius: 25px !important;}
+h1{    font-size: 30px!important;    line-height: 120%;}
 .depositbox h4 {
   color: #fff;
   font-weight: 400;
@@ -2232,7 +2323,7 @@ footer ul li b {
   max-width: 50%;
   padding-left: 30px;
 }
-
+.main_logo{ margin-top: 50px;}
 @media (max-width: 768px) {
   .about {
     max-width: 100%;
@@ -2287,6 +2378,7 @@ footer ul li b {
   line-height: 110%;
   margin-bottom: 10px;
   font-weight: 300;
+  color: #727F8E;
 }
 
 .specialist-header .expert {
@@ -2487,8 +2579,9 @@ footer ul li b {
 .akcii-item .akcii-footer .btn {
   height: 50px;
   max-width: 160px;
+  color: #0C54A0;
 }
-
+.akcii-item .akcii-footer .btn:hover{ background-color: #9FCAFF;}
 .akcii-item .descripti {
   font-size: 24px;
   line-height: 120%;
@@ -2585,12 +2678,14 @@ footer ul li b {
   .top-block {
     height: 200px;
   }
-
+  .top-block img {
+    height: 100%; width: 100%;
+  }section .wrapper{ row-gap:30px}
   .depositbox h4 {
     margin-bottom: 15px;
     line-height: 120%;
   }
-
+  .akcii-item.special{ height: auto;}
   .section-title h2,
   .section-title h3 {
     width: 100%;
@@ -2846,7 +2941,8 @@ footer ul li b {
 .order-block .selecttime .item {
   cursor: pointer;
   position: relative;
-  width: 90px;
+  max-width: 90px;
+  width:90%;
   height: 65px;
 }
 
@@ -2935,7 +3031,7 @@ footer ul li b {
   content: "\e903";
   margin-right: 10px;
   color: #0C54A0;
-  margin-left: -20px;
+  margin-left: -30px;
   float: left;
   font-family: 'icomoon' !important;
 }
@@ -4369,20 +4465,44 @@ select {
     text-indent: -10000px;
     width: 60px;
   }
-  .previlegii .descript{font-size: 20px;}
+  .more-data{    width: 100%; flex-wrap: wrap;}.more-data img{    max-width: 100%; margin-bottom: 20px;}
+  .more-data .more-footer{ margin-top: 20px;justify-content: space-around;}.more-data .more-footer .cost{ margin-bottom: 15px;}
+  .previlegii .descript {
+    font-size: 20px;
+  }
 
   .section-title .btn::after {
     text-indent: -12px;
   }
-  .section-title .greybox{    max-width: 100%;
-    margin-top: 30px;}
+
+  .section-title .greybox {
+    max-width: 100%;
+    margin-top: 30px;
+  }
 }
+
 @media (max-width: 600px) {
-  .gallery .img{max-width: 48%;}
-  .gallery{    order: 2;}
-  .previlegii{ margin-bottom: 20px;}
-  .header.micro{ padding: 0!important;}.micro + #content{margin-top: 150px;}
+  .gallery .img {
+    max-width: 48%;
+  }
+
+  .gallery {
+    order: 2;
+  }
+
+  .previlegii {
+    margin-bottom: 20px;
+  }
+
+  .header.micro {
+    padding: 0 !important;
+  }
+
+  .micro+#content {
+    margin-top: 150px;
+  }
 }
+
 @media (max-width: 480px) {
   .place-block .place-fotter .place-data a.icon-phone {
     font-size: 24px;
@@ -4431,9 +4551,10 @@ select {
 }
 
 @media (max-width: 375px) {
+  .box-grey{ padding: 25px;}
   .place-block .place-title {
     font-size: 20px;
-  }
+  } 
 
   .place-block .place-image {
     margin-top: -30px;
@@ -4459,12 +4580,120 @@ select {
   }
 }
 
-#content .gallery .btn{ margin-top: -40px;}
-.spiral img{ border: 1px solid #B6C5D7; border-radius: 15px; margin-right: 35px;}
-.spiral  .warning{ font-weight: 400; margin-top: 30px;}
-.spiral+.whit-alert{ text-align: left;}
-.effective img{ border-radius: 15px;}.effective h2{ font-size: 49px;}
-.effective  {font-size: 24px;}
-.effective  .blue{ border-radius: 15px;background-color: #9FCAFF; color: #0C54A0;font-size: 20px; padding: 30px;}
-.record .about{ padding-left: 0; padding-right: 50px;}
-.content_video{ overflow: hidden; border: 1px solid #B6C5D7; border-radius: 15px;}.content_video video{ width: 100%;}
+#content .gallery .btn {
+  margin-top: -40px;
+}
+
+.spiral img {
+  border: 1px solid #B6C5D7;
+  border-radius: 15px;
+  margin-right: 35px;
+}
+
+.spiral .warning {
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.spiral+.whit-alert {
+  text-align: left;
+}
+
+.effective img {
+  border-radius: 15px;
+}
+
+.effective h2 {
+  font-size: 49px;
+}
+
+.effective {
+  font-size: 24px;
+}
+
+.effective .blue {
+  border-radius: 15px;
+  background-color: #9FCAFF;
+  color: #0C54A0;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.record .about {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.content_video {
+  overflow: hidden;
+  border: 1px solid #B6C5D7;
+  border-radius: 15px;
+  max-height: 382px;
+}
+
+.content_video video {
+  width: 100%;
+}
+
+.better_clinic {
+  max-width: 500px;
+
+}
+
+.better_clinic-box {
+  border-radius: 15px;
+  padding: 25px 30px;
+  background: #0270C2;
+  margin-bottom: 20px;
+  background: linear-gradient(315deg, #0270C2, #0246AA);
+}
+
+.better_clinic h5 {
+  font-size: 30px;
+}
+
+.better_clinic h4,
+.better_clinic li {
+  color: #fff;
+}
+
+.better_clinic-box li:before {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.better_clinic h5 {
+  padding-left: 20px;
+}
+
+.about_ortopedia {
+  flex: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  align-content: flex-start;
+}
+
+.about_ortopedia .col {
+  border: 1px solid #B6C5D7;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 48%;
+  margin-bottom: 30px;
+}
+
+.about_ortopedia h5 {
+  margin-left: 0px;
+  font-size: 30px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+h2+.wartext {
+  margin: 0;
+}
+
+.blue-line {
+  background: #9FCAFF url(../images/blue-line.jpg);
+}
+.owl-stage-outer{ overflow: hidden; max-width: 100%;}
