@@ -106,12 +106,14 @@
 .icon-basket:before {
   content: "\e913";
 }
+
 input::placeholder {
   color: #707f92;
   font-size: 16px;
   font-style: italic;
-    font-family: Jost;
+  font-family: Jost;
 }
+
 ul {
   list-style: none;
   padding-left: 0px;
@@ -1307,12 +1309,20 @@ ol strong {
   padding: 20px 0 90px;
 }
 
+#pressa .flex-col {
+  max-width: 325px;
+}
+
 #review {
   padding: 70px 0 50px;
 }
 
 #serv {
   padding: 20px 0 0;
+}
+
+#about {
+  padding-bottom: 0;
 }
 
 #head {
@@ -1328,10 +1338,14 @@ ol strong {
   height: 100%;
   content: '';
   display: block;
-  background: #0C54A0;
+
+  background: #0247AB;
+  background: linear-gradient(135deg, #0247AB, #0270C2);
+  mix-blend-mode: hard-light;
   top: 0;
-  opacity: .5;
+
   z-index: 10;
+  opacity: .6;
 }
 
 #head video {
@@ -1374,6 +1388,8 @@ ol strong {
   top: 0;
   width: 100%;
   z-index: 1;
+  left: 0;
+  height: 100%;
 }
 
 #head .offer {
@@ -1495,9 +1511,13 @@ ol strong {
 
 .micro.owl-carousel {
   position: relative;
-  max-width: 90%; 
+  max-width: 90%;
 }
-.micro .owl-nav button{ margin: 0;}
+
+.micro .owl-nav button {
+  margin: 0;
+}
+
 .micro .owl-nav {
   text-align: left;
   display: block;
@@ -1673,7 +1693,7 @@ header .icon-find {
 
 .threedmenu {
   width: 600px;
-   background-color: transparent;
+  background-color: transparent;
   position: absolute;
   position: absolute;
   display: flex;
@@ -1695,7 +1715,7 @@ header .icon-find {
 }
 
 #megamenu .threedmenu li:hover a {
-  color: #0C54A0!important;
+  color: #0C54A0 !important;
 }
 
 .secondmenu {
@@ -2058,11 +2078,25 @@ footer ul li b {
 }
 
 .depositbox .btn {
-  min-width: 230px;    justify-content: center;
+  min-width: 230px;
+  justify-content: start;
 }
-.order-data{ padding: 25px;}
-form input, form select, form textarea{    border-radius: 25px !important;}
-h1{    font-size: 30px!important;    line-height: 120%;}
+
+.order-data {
+  padding: 25px;
+}
+
+form input,
+form select,
+form textarea {
+  border-radius: 25px !important;
+}
+
+h1 {
+  font-size: 30px !important;
+  line-height: 120%;
+}
+
 .depositbox h4 {
   color: #fff;
   font-weight: 400;
@@ -2323,7 +2357,11 @@ h1{    font-size: 30px!important;    line-height: 120%;}
   max-width: 50%;
   padding-left: 30px;
 }
-.main_logo{ margin-top: 50px;}
+
+.main_logo {
+  margin-top: 50px;
+}
+
 @media (max-width: 768px) {
   .about {
     max-width: 100%;
@@ -2538,7 +2576,8 @@ h1{    font-size: 30px!important;    line-height: 120%;}
 .card-content .descrip {
   color: #2C3846;
   font-weight: 600;
-  margin: auto;
+  
+  font-size: 20px; margin-bottom: 10px;
 }
 
 .card-content li {
@@ -2581,7 +2620,11 @@ h1{    font-size: 30px!important;    line-height: 120%;}
   max-width: 160px;
   color: #0C54A0;
 }
-.akcii-item .akcii-footer .btn:hover{ background-color: #9FCAFF;}
+
+.akcii-item .akcii-footer .btn:hover {
+  background-color: #9FCAFF;
+}
+
 .akcii-item .descripti {
   font-size: 24px;
   line-height: 120%;
@@ -2678,14 +2721,25 @@ h1{    font-size: 30px!important;    line-height: 120%;}
   .top-block {
     height: 200px;
   }
+
   .top-block img {
-    height: 100%; width: 100%;
-  }section .wrapper{ row-gap:30px}
+    height: 100%;
+    width: 100%;
+  }
+
+  section .wrapper {
+    row-gap: 30px
+  }
+
   .depositbox h4 {
     margin-bottom: 15px;
-    line-height: 120%;
+    line-height: 120%;    font-size: 29px;
   }
-  .akcii-item.special{ height: auto;}
+
+  .akcii-item.special {
+    height: auto;
+  }
+
   .section-title h2,
   .section-title h3 {
     width: 100%;
@@ -2744,7 +2798,7 @@ h1{    font-size: 30px!important;    line-height: 120%;}
 #akcii .flex-row {
   margin-bottom: 25px;
 }
-
+#content #akcii .wrapper{ padding: 0!important;   row-gap: 0!important;}
 .data-box {
   position: relative;
   height: 250px;
@@ -2875,10 +2929,11 @@ h1{    font-size: 30px!important;    line-height: 120%;}
 
 .about-company .slide-gallery {
   flex: 45%;
+  overflow: hidden;
 }
 
-.slide-gallery {
-  overflow: hidden;
+.slide-gallery img {
+
   border-radius: 15px;
   border: 1px solid #d5e0ec;
 }
@@ -2942,7 +2997,7 @@ h1{    font-size: 30px!important;    line-height: 120%;}
   cursor: pointer;
   position: relative;
   max-width: 90px;
-  width:90%;
+  width: 90%;
   height: 65px;
 }
 
@@ -4120,8 +4175,20 @@ select {
   display: none;
   will-change: opacity;
 }
-
-.sidenav .collapsible,
+.sidenav-close{
+  display: block;
+  position: absolute;
+  right:  20px;
+  top: 20px;
+  background: url(../images/close.svg) no-repeat;
+  width:45px;
+  height:45px;
+  z-index: 20;
+  background-size:90%;
+}
+.no-link:before{ display: none;}
+.sidenav ul li> ul{ display: none;}
+ .sidenav .collapsible,
 .sidenav.fixed .collapsible {
   border: none;
   -webkit-box-shadow: none;
@@ -4295,7 +4362,7 @@ select {
   right: 0;
   top: 5px;
   margin: auto;
-  background: #fff url(../images/logo.svg) no-repeat center center;
+  background: #fff url(../images/logo.svg) no-repeat 50px center;
   display: block;
   width: 100%;
   background-size: 50%;
@@ -4311,12 +4378,10 @@ select {
   line-height: 48px;
   border-bottom: 1px solid #B6C5D7;
 }
+.sidenav .collapsible-header{margin-bottom: 0px;}
 
-.sidenav li.active {
-  background-color: rgba(0, 0, 0, 0.05);
-}
 
-.sidenav li>a {
+.sidenav .collapsible-header a {
   font-size: 24px;
   display: block;
   color: #3A4E66;
@@ -4326,9 +4391,10 @@ select {
   padding: 0 10px;
 }
 
-.sidenav li>a:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
+.sidenav  .collapsible-body ul{}
+.sidenav  .collapsible-body ul li{border-bottom: 1px solid #d7e3f1;}
+.sidenav  .collapsible-body ul li:last-child{border-bottom: none;}
+.sidenav  .collapsible-body ul li a {padding: 0 14px 0 20px;  color: #3A4E66;  font-weight:400;font-size: 18px;}
 
 .sidenav li>a.btn,
 .sidenav li>a.btn-large,
@@ -4465,8 +4531,26 @@ select {
     text-indent: -10000px;
     width: 60px;
   }
-  .more-data{    width: 100%; flex-wrap: wrap;}.more-data img{    max-width: 100%; margin-bottom: 20px;}
-  .more-data .more-footer{ margin-top: 20px;justify-content: space-around;}.more-data .more-footer .cost{ margin-bottom: 15px;}
+
+  .more-data {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .more-data img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .more-data .more-footer {
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+
+  .more-data .more-footer .cost {
+    margin-bottom: 15px;
+  }
+
   .previlegii .descript {
     font-size: 20px;
   }
@@ -4504,6 +4588,7 @@ select {
 }
 
 @media (max-width: 480px) {
+
   .place-block .place-fotter .place-data a.icon-phone {
     font-size: 24px;
   }
@@ -4548,13 +4633,44 @@ select {
   #content h1 {
     margin-bottom: 10px;
   }
+
+  .collapsible-header {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .collapsible-header:before {
+    width: 10px;
+    height: 10px;
+    font-size: 14px;
+  }
+
+  .collapsible .active .collapsible-header:before {
+    padding-left: 4px;
+    right: -3px;
+  }
+  .collapsible-body{ padding: 10px;}
+  .previlegii{ padding: 0 30px;}
+  #head span{    font-size: 28px;    line-height: 120%;}
 }
 
 @media (max-width: 375px) {
-  .box-grey{ padding: 25px;}
+  .collapsible-header {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .collapsible .active .collapsible-header:before {
+    padding-left: 1px;
+    right: 4px;
+  }
+}
+  .box-grey {
+    padding: 25px;
+  }
+
   .place-block .place-title {
     font-size: 20px;
-  } 
+  }
 
   .place-block .place-image {
     margin-top: -30px;
@@ -4578,7 +4694,7 @@ select {
   .place-fotter .place-days {
     max-width: 100% !important;
   }
-}
+
 
 #content .gallery .btn {
   margin-top: -40px;
@@ -4696,4 +4812,8 @@ h2+.wartext {
 .blue-line {
   background: #9FCAFF url(../images/blue-line.jpg);
 }
-.owl-stage-outer{ overflow: hidden; max-width: 100%;}
+
+.owl-stage-outer {
+  overflow: hidden;
+  max-width: 100%;
+}
