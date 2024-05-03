@@ -546,7 +546,7 @@ h2 {
   width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   h2 {
     font-size: 40px;
   }
@@ -857,7 +857,8 @@ a:focus {
   width: 100%;
   flex: 100%;
 }
-
+.tab-content h2{    font-size: 40px;    margin-bottom: 20px;
+  margin-top: 30px; }
 form {
   width: 100%;
   flex: 100%;
@@ -1088,13 +1089,13 @@ ul.pricelist li a:hover {
   color: #0C54A0;
 }
 
-ul.pricelist li span {
+ul.pricelist li .price span {
   color: #0C54A0;
-  font-size: 18px;
+  font-size: 18px;    white-space: nowrap;
 }
-
+ul.pricelist li .price{ display: flex;align-items: center;    column-gap: 5px;}
 ul.pricelist li b {
-  color: #3A4E66;
+  color: #3A4E66; white-space: nowrap;
   font-weight: 300;
   text-decoration: line-through;
 }
@@ -1654,11 +1655,13 @@ ol strong {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 99;
-  top: 0;
+  top: 150px;
+  margin-top: -100px;
 }
-
+header.fixed{position: fixed; top: 0px;margin-top: 0px;background: #fff; box-shadow: 0px 7px 20px 10px #121b1e0a;}
+header.fixed .wrapper{box-shadow: 0px 0px 0px 0px #121b1e0a!important;}
 header.micro {
   padding: 60px 0;
 }
@@ -1677,8 +1680,8 @@ header.micro .wrapper {
 }
 
 header.inside {
-  background: #fff;
-  box-shadow: 0px 7px 20px 10px #121b1e0a;
+  background: #fff;    top: 100px; position: fixed;
+  box-shadow: 0px 7px 20px 10px #121b1e0a!important;
 }
 
 header.inside .wrapper {
@@ -1900,7 +1903,7 @@ header .menu li ul li {
 header .menu li ul li:hover {
   background-color: #e4edf8;
 }
-
+header .menu li.active,
 header .menu li:hover {
   background: #F2F6FB;
 }
@@ -2192,7 +2195,9 @@ footer ul li b {
   min-width: 230px;
   justify-content: start;
 }
-
+.depositbox input.btn[type="submit"]{
+  justify-content:center;
+}
 .order-data {
   padding: 25px;
 }
@@ -2203,18 +2208,14 @@ form textarea {
   border-radius: 35px;
 }
 
-h1 {
-  font-size: 30px !important;
-  line-height: 120%;
-}
-
 .depositbox h4 {
   color: #fff;
   font-weight: 400;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 15px;
 }
-
+.depositbox img{margin-right: -30px;margin-left: 20px;}
 .depositbox p {
   color: #fff;
   font-weight: 300;
@@ -3487,9 +3488,9 @@ h1 {
 .fizio-content .descript {
   color: #0C54A0;
   font-size: 24px;
-  min-height: 59px;
+  min-height: 59px;    width: 100%;
 }
-
+#fizio .grid{    justify-content: space-between;}
 .fizio-content .text {
   color: #3A4E66;
   margin-bottom: 20px;
@@ -3929,7 +3930,7 @@ aside ul li a {
 
 .collapsible-header {
   color: #0C54A0;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .nowrap {
