@@ -1471,9 +1471,11 @@ ol strong {
   max-width: 40%;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: center;padding-left: 0px;
 }
-
+.about.biginfo{
+  min-width: 50%; padding-left: 0px;
+}
 .hivat .contentlist li {
   border: none;
   padding: 10px 30px;
@@ -5664,12 +5666,16 @@ h2+.wartext {
   text-align: center;
   color: #fff;
 }
+.calltogame{ background: url(../img/bg-game-ready-1.webp);
+  position: relative; background-size:100%;
+  text-align: center; height: 400px;
+  color: #fff;}
 
-.callto .btn {
+.callto .btn,.calltogame .btn {
   color: #0246AA;
 }
 
-.callto .wrapper {
+.callto .wrapper,.calltogame .wrapper {
   position: relative;
   z-index: 20;
   row-gap: 20px;
@@ -5679,18 +5685,18 @@ h2+.wartext {
   align-items: center;
 }
 
-.callto h2 {
+.callto h2, .calltogame h2 {
   color: #fff;
 }
 
-.callto p {
+.callto p, .calltogame p {
   color: #fff;
   width: 100%;
   display: block;
   font-size: 20px;
 }
 
-.callto::before {
+.callto::before,  .calltogame::before  {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -5703,7 +5709,10 @@ h2+.wartext {
   z-index: 10;
   opacity: .6;
 }
+.calltogame::before{ opacity: .8;}
 
+.cyan.npadd{ padding: 70px 0 50px;}
+.cyan.npadd .wartext{ color: #fff;font-size: 20px;}
 .laser {
   display: flex;
   justify-content: flex-start;
@@ -5730,7 +5739,8 @@ h2+.wartext {
 
 .mechanizm img {
   margin-right: 20px;
-  max-width: 200px;
+  max-width: 200px;    border: 1px solid #d7d7d7;
+  border-radius: 100%;
 }
 
 .laser .about {
@@ -5801,3 +5811,9 @@ h2+.wartext {
 }
 .control{ justify-content: space-between;}
 .control .flex-col{ max-width: 25%;}
+
+.wave-terapia{
+  background: url(../img/udr1.jpg) no-repeat 50px top, url(../img/bedro.jpg) no-repeat 90% top ; height: 900px;
+}
+.wave-terapia .flex-row{    justify-content: center;}
+.wave-terapia .about  { margin-top: 200px;}
