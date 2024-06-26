@@ -368,8 +368,8 @@ ul {
 }
 
 .flex-row.grid .flex-col {
-  flex: 24%;
-  max-width: 23%;
+  flex: 23%;
+
 }
 
 @media (max-width: 1200px) {
@@ -1471,11 +1471,15 @@ ol strong {
   max-width: 40%;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;padding-left: 0px;
+  align-content: center;
+  padding-left: 0px;
 }
-.about.biginfo{
-  min-width: 50%; padding-left: 0px;
+
+.about.biginfo {
+  min-width: 50%;
+  padding-left: 0px;
 }
+
 .hivat .contentlist li {
   border: none;
   padding: 10px 30px;
@@ -1600,8 +1604,7 @@ ol strong {
   height: auto
 }
 
-#head .offer
- {
+#head .offer {
   margin: auto;
   z-index: 100;
   max-width: 90%;
@@ -1613,14 +1616,26 @@ ol strong {
   bottom: 0;
   height: 150px;
 }
-.videobg .offer{
+
+.videobg .offer {
   color: #fff;
   z-index: 100;
   max-width: 700px;
   text-align: left;
   position: absolute;
-}.videobg .offer h2{ margin-bottom: 30px;  text-transform: uppercase;font-weight: 600;}
-.videobg .offer h2, .videobg .offer p{ color:#fff}
+}
+
+.videobg .offer h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.videobg .offer h2,
+.videobg .offer p {
+  color: #fff
+}
+
 #head .offer .btn,
 .videob .offer .btn {
   margin: auto;
@@ -5666,16 +5681,23 @@ h2+.wartext {
   text-align: center;
   color: #fff;
 }
-.calltogame{ background: url(../img/bg-game-ready-1.webp);
-  position: relative; background-size:100%;
-  text-align: center; height: 400px;
-  color: #fff;}
 
-.callto .btn,.calltogame .btn {
+.calltogame {
+  background: url(../img/bg-game-ready-1.webp);
+  position: relative;
+  background-size: 100%;
+  text-align: center;
+  height: 400px;
+  color: #fff;
+}
+
+.callto .btn,
+.calltogame .btn {
   color: #0246AA;
 }
 
-.callto .wrapper,.calltogame .wrapper {
+.callto .wrapper,
+.calltogame .wrapper {
   position: relative;
   z-index: 20;
   row-gap: 20px;
@@ -5685,18 +5707,21 @@ h2+.wartext {
   align-items: center;
 }
 
-.callto h2, .calltogame h2 {
+.callto h2,
+.calltogame h2 {
   color: #fff;
 }
 
-.callto p, .calltogame p {
+.callto p,
+.calltogame p {
   color: #fff;
   width: 100%;
   display: block;
   font-size: 20px;
 }
 
-.callto::before,  .calltogame::before  {
+.callto::before,
+.calltogame::before {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -5709,14 +5734,58 @@ h2+.wartext {
   z-index: 10;
   opacity: .6;
 }
-.calltogame::before{ opacity: .8;}
 
-.cyan.npadd{ padding: 70px 0 50px;}
-.cyan.npadd .wartext{ color: #fff;font-size: 20px;}
+.calltogame::before {
+  opacity: .8;
+}
+
+.cyan p,
+.cyan h4 {
+  color: #fff;
+}
+
+.cyan h4 {
+  margin-bottom: 30px;
+}
+
+
+.cyan.who {
+  padding: 70px 0 60px;
+}
+
+.npadd h4 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cyan.npadd {
+  padding: 70px 0 50px;
+}
+
+.cyan.npadd .wartext {
+  color: #fff;
+  font-size: 20px;
+}
+
 .laser {
   display: flex;
   justify-content: flex-start;
+  overflow: hidden;
   padding-bottom: 0px;
+}
+
+.mio {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+ 
+}
+
+.mio .img_box {
+  max-width: 65%;
+  margin-left: -0%;
+  overflow: hidden;
+  margin-bottom: -120px;
 }
 
 .laser .img_box {
@@ -5724,6 +5793,10 @@ h2+.wartext {
   margin-left: -10%;
   overflow: hidden;
   margin-top: -120px;
+}
+
+.mio .img_box img {
+  width: 100%;
 }
 
 .laser .img_box img {
@@ -5739,7 +5812,8 @@ h2+.wartext {
 
 .mechanizm img {
   margin-right: 20px;
-  max-width: 200px;    border: 1px solid #d7d7d7;
+  max-width: 200px;
+  border: 1px solid #d7d7d7;
   border-radius: 100%;
 }
 
@@ -5805,15 +5879,29 @@ h2+.wartext {
   font-size: 25px
 }
 
-.man{
-  background: url(../images/man.jpg) no-repeat center center; background-size:100%;    
+.man {
+  background: url(../images/man.jpg) no-repeat center center;
+  background-size: 100%;
   height: 750px;
 }
-.control{ justify-content: space-between;}
-.control .flex-col{ max-width: 25%;}
 
-.wave-terapia{
-  background: url(../img/udr1.jpg) no-repeat 50px top, url(../img/bedro.jpg) no-repeat 90% top ; height: 900px;
+.control {
+  justify-content: space-between;
 }
-.wave-terapia .flex-row{    justify-content: center;}
-.wave-terapia .about  { margin-top: 200px;}
+
+.control .flex-col {
+  max-width: 25%;
+}
+
+.wave-terapia {
+  background: url(../img/udr1.jpg) no-repeat 50px top, url(../img/bedro.jpg) no-repeat 90% top;
+  height: 900px;
+}
+
+.wave-terapia .flex-row {
+  justify-content: center;
+}
+
+.wave-terapia .about {
+  margin-top: 200px;
+}
